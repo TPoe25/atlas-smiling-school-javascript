@@ -1,1 +1,1 @@
-# atlas-smiling-school-javascript
+## atlas-smiling-school-javascript
