@@ -2,6 +2,8 @@
 
 This project implements responsive web pages using HTML, CSS, Bootstrap, and JavaScript, featuring carousels powered by Slick Carousel.
 
+# (<https://tpoe25.github.io/tpoe25.github.io-atlas-smiling-school-javascript/>)Link to website!
+
 ## Features
 
 - Responsive design:
