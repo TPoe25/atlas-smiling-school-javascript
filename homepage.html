@@ -7,6 +7,7 @@
     <!-- Custom and Font Styles  -->
     <link rel="stylesheet" href="styles.css" />
     <link rel="stylesheet" href="font-style.css" />
+    <script src="scripts.js"></script>
     <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
     <!-- Google Fonts -->
     <link
@@ -61,7 +62,7 @@
           </button>
           <a
             class="navbar-brand mx-auto d-flex flex-column flex-sm-row align-items-center mt-3"
-            href="homepage.html"
+            href="#"
           >
             <img
               src="images/smile_off.png"
@@ -79,14 +80,10 @@
           <div class="collapse navbar-collapse text-center mt-3" id="navbarNav">
             <ul class="navbar-nav ml-auto font-weight-bold">
               <li class="nav-item">
-                <a class="nav-link text-white px-1" href="courses.html"
-                  >COURSES</a
-                >
+                <a class="nav-link text-white px-1" href="courses.html">COURSES</a>
               </li>
               <li class="nav-item px-0 px-sm-5 py-2 py-sm-0">
-                <a class="nav-link text-white px-1" href="pricing.html"
-                  >PRICING</a
-                >
+                <a class="nav-link text-white px-1" href="pricing.html">PRICING</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link text-white px-1" href="#">LOGIN</a>
@@ -110,26 +107,26 @@
           <p class="hero-learn font-weight-bold">
             <span>Learn</span> from the pros
           </p>
-          <div class="row pros">
-            <div class="col-6 col-md-3 pro1">
+          <div class="procarousel">
+            <div>
               <img src="images/profile_1.jpg" alt="profile 1" />
               <h3>Phillip Massey</h3>
               <span>« Smile of the year »</span>
               <span>2018 - 2019</span>
             </div>
-            <div class="col-6 col-md-3 pro2">
+            <div>
               <img src="images/profile_2.jpg" alt="profile 2" />
               <h3>Nannie Lawrence</h3>
               <span>Best « little smile »</span>
               <span>2017</span>
             </div>
-            <div class="col-6 col-md-3 pro3">
+            <div>
               <img src="images/profile_3.jpg" alt="profile 3" />
               <h3>Bruce Walters</h3>
               <span>Best « Friend Smile »</span>
               <span>live performance 2019</span>
             </div>
-            <div class="col-6 col-md-3 pro4">
+            <div>
               <img src="images/profile_4.jpg" alt="profile 4" />
               <h3>Henry Hughes</h3>
               <span>« 24h smiles » winner</span>
@@ -2066,4 +2063,39 @@
       </div>
     </footer>
   </body>
+<!-- Slick Carousel CSS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css" />
+
+<!-- jQuery (Required for Slick) -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<!-- Slick Carousel JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+
+<script>
+  $(document).ready(function () {
+    // Professionals Carousel
+    $('.procarousel').slick({
+      dots: true,
+      infinite: true,
+      speed: 500,
+      slidesToShow: 3,
+      slidesToScroll: 1,
+      responsive: [
+        { breakpoint: 768, settings: { slidesToShow: 2, slidesToScroll: 1 } },
+        { breakpoint: 576, settings: { slidesToShow: 1, slidesToScroll: 1 } }
+      ]
+    });
+
+    // Quotes Carousel
+    $('.slider-quotes').slick({
+      dots: true,
+      infinite: true,
+      speed: 500,
+      slidesToShow: 1,
+      slidesToScroll: 1
+    });
+  });
+</script>
 </html>
